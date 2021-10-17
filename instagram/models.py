@@ -24,3 +24,12 @@ class Image(models.Model):
      
     def __str__(self):
         return self.image_name        
+
+class Comment(models.Model):
+    image = models.ForeignKey('Image',on_delete=models.CASCADE)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    comment = models.CharField(max_length=100)
+    posted_on = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.comment        
