@@ -11,6 +11,7 @@ from django.core.exceptions import ObjectDoesNotExist
 def welcome(request):
     return HttpResponse('Welcome to Instagram')
 
+@login_required(login_url='/accounts/login/')
 def home(request):
     images = Image.objects.all().order_by('-post_date')
     users = User.objects.all()  
@@ -71,11 +72,11 @@ def search_results(request):
         
         message = f"{search_term}"
         
-        return render(request, 'searched.html',{"message":message,"users": searched_users,"profile":profile})
+        return render(request, 'search.html',{"message":message,"users": searched_users,"profile":profile})
 
     else:
         message = "Please input a name in the search form"
-        return render(request, 'searched.html',{"message":message})
+        return render(request, 'search.html',{"message":message})
 
 @login_required(login_url='/accounts/login/')
 def new_image(request,id):

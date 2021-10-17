@@ -8,10 +8,10 @@
         {% if users %}
         <h3>Found  users matching the name</h3>
         {% for user in users %}
-        <a style="text-decoration:none;color:black" href="{% url 'profile' user.id  %}">
-        <p><img class="post-search"  src="{{user.profile.profile_pic.url}}" class="img-responsive" alt="Image">
+        <!-- <a style="text-decoration:none;color:black" href="#"> -->
+        <p><img class="post-search"  src="{{user.profile.profile_pic.url}}" class="img-responsive" alt="Image" width="100" height="100vh">
         <strong>{{user.username}}</strong></p>
-        </a>
+        <!-- </a> -->
         <hr>
         {% endfor %}
         

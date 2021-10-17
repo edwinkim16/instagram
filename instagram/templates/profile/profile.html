@@ -43,7 +43,7 @@
     <div class="col-md-8">
     {% for image in images %}
     <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 ">
-        <img style="margin:13px;height:200px;width:200px;" src="{{image.image.url}}" class="img-responsive" alt="Image">
+        <img height="100vh" width="100" src="{{image.image.url}}" class="img-responsive" alt="Image">
         {% if request.user == user %}
         
         {% endif %}

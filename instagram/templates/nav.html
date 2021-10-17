@@ -1,4 +1,4 @@
-<nav id="grad" class="navbar-fixed-top navbar-default">
+<nav id="grad" class="navbar-fixed-top navbar-default" style="background-color: yellowgreen;">
     <div class="navbar-collapse ">
         <div class="row">
         <!-- ICON -->
@@ -24,6 +24,7 @@
         </div>
         <!-- SEARCH-BAR-END -->
         <!-- NAVIGATIONS -->
+        
         <div class="col-md-4">
             <ul style="padding-right: 15px;" class="nav navbar-nav navbar-right">
             <li>
@@ -35,8 +36,14 @@
                 href="{% url 'profile' user.id %}">Profile</a>
             </li>
             <li>
-                <a style="font-size:18px;color:black" class="glyphicon glyphicon-off " href="/accounts/login">Logout</a>
-            </li>
+                <a style="font-size:18px;color:black" class="glyphicon glyphicon-off " href="/logout">Logout</a>
+            <!-- </li>
+           
+             <li>
+               <a class='btn btn-default' href="/accounts/login">Login</a>
+            </li> -->
+
+
             </ul>
         </div>
         <!-- NAVIGATIONS-END -->
