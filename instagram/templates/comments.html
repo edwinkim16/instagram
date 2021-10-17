@@ -11,7 +11,7 @@
 
 <title>New Comment</title>
 {{form.media}}
-{% load bootstrap3 %} {% load staticfiles %}
+{% load bootstrap3 %} {% load static %}
 {% block styles %} {% bootstrap_css %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
 <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Dancing+Script|Lobster|Niconne|Pacifico|Righteous|Satisfy&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
     <div class="col-md-8 col-sm-10 col-xs-12">
         <div class="card">
                 
-        <p><img class="post" src="{{image.profile.profile_pic.url}}"><strong>{{image.owner}}</strong></p><br>
+        <p><img class="post" src="{{image.profile.profile_pic.url}}" width="100" height="100vh"><strong>{{image.owner}}</strong></p><br>
                                 
         <img class="img-responsive" src="{{image.image.url}}"><br>
         {% if likes %}

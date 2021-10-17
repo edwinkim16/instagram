@@ -12,7 +12,7 @@
         <!-- SEARCH-BAR -->
         <div class="col-md-4">
             <form class="navbar-form form-search" style="background-color: transparent;" role="search"
-            action="">
+            action="{% url 'search_results' %}">
             <div class="input-group">
                 <input type="text" style="border:1px solid grey" class="form-control" placeholder="Search" name="user">
                 <div class="input-group-btn">
@@ -28,14 +28,14 @@
             <ul style="padding-right: 15px;" class="nav navbar-nav navbar-right">
             <li>
                 <a style="font-size:18px;color:black;" class="glyphicon glyphicon-upload "
-                href="">Upload</a>
+                href="{% url 'new_image' user.id %}">Upload</a>
             </li>
             <li>
                 <a style="font-size:18px;color:black" class="glyphicon glyphicon-user "
-                href="">Profile</a>
+                href="{% url 'profile' user.id %}">Profile</a>
             </li>
             <li>
-                <a style="font-size:18px;color:black" class="glyphicon glyphicon-off " href="">Logout</a>
+                <a style="font-size:18px;color:black" class="glyphicon glyphicon-off " href="/accounts/login">Logout</a>
             </li>
             </ul>
         </div>
