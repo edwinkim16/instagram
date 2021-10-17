@@ -12,3 +12,15 @@ class Profile(models.Model):
     following = models.ManyToManyField('Profile',related_name="profile_following",blank=True,default=0)
     def __str__(self):
         return self.user
+
+class Image(models.Model):
+    image = CloudinaryField('image')
+    owner = models.ForeignKey(User, null=True, on_delete=models.CASCADE,related_name="user_name")
+    profile = models.ForeignKey(Profile,on_delete=models.CASCADE,null=True)
+    image_name = models.CharField(max_length =30)
+    caption = models.CharField(max_length =50)
+    post_date = models.DateTimeField(auto_now_add=True)
+    
+     
+    def __str__(self):
+        return self.image_name        
