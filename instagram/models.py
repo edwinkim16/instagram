@@ -62,6 +62,11 @@ class Comment(models.Model):
     comment = models.CharField(max_length=100)
     posted_on = models.DateTimeField(auto_now=True)
 
+    def save_comment(self):
+        self.save()
+    def delete_comment(self):
+        self.delete()
+
     def __str__(self):
         return self.comment        
 
