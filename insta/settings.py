@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'instagram.apps.InstagramConfig',
     'bootstrap3',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
